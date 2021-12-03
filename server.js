@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 //armazenando no disco
 const armazenamento = multer.diskStorage({
     destination:(req,file,callBack)=>{
-        callBack(null,'./upload')
+        callBack(null, true)
     },
     filename:(req,file,callBack)=>{
         //Nome do arquivo + data agora + extensao 
